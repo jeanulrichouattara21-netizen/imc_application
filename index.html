@@ -32,7 +32,7 @@
       const taille = parseFloat(document.getElementById('taille').value);
       const resultat = document.getElementById('resultat');
 
-      if (isNaN(poids) || isNaN(taille) || taille <= 0) {
+      if (!poids || !taille || taille <= 0) {
         resultat.textContent = "Veuillez entrer des valeurs valides.";
         return;
       }
